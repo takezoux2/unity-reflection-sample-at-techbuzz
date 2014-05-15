@@ -30,6 +30,12 @@ public class Menu : MonoBehaviour {
             Application.LoadLevel ("SendMessageLike");
 
         }
+
+        if (GUILayout.Button ("JSON化")) {
+
+            Application.LoadLevel ("ToJSON");
+
+        }
     }
 
 

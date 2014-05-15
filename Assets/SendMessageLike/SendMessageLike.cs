@@ -82,15 +82,13 @@ public class SendMessageLike : MonoBehaviour {
 
     MethodInfo FindMethodByName(string methodName){
         var methods = GetType().GetMethods();
-        MethodInfo method = null;
         foreach(var m in methods)
         {
             if(m.Name == methodName){
-                method = m;
-                return null;
+                return m;
             }
         }
-        return method;
+        return null;
     }
 
     public void ShowMessage(string message){
@@ -100,5 +98,15 @@ public class SendMessageLike : MonoBehaviour {
     public int Add(int a,int b){
         return a + b;
     }
+
+    public void Move(int x,int y ,int z){
+        transform.localPosition += new Vector3 (x, y, z);
+    }
+
+    public void Rotate(int x,int y , int z){
+        transform.localEulerAngles +=  new Vector3 (x, y, z);
+    }
+
+
 
 }
