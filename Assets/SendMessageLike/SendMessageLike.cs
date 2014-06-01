@@ -20,6 +20,7 @@ public class SendMessageLike : MonoBehaviour {
 
     string result = "";
     void OnGUI(){
+        GUI.skin.label.fontSize = 20;
         GUILayout.Label ("MonoBehaviour#SendMessageみたいな機能を作ってみる");
 
         GUILayout.BeginHorizontal ();
@@ -65,12 +66,15 @@ public class SendMessageLike : MonoBehaviour {
                     passArgs[i] = args[i];
                 }else if(paramType == typeof(int)){
                     passArgs[i] = int.Parse(args[i]);
+                }else if(paramType == typeof(double)){
+                    passArgs[i] = double.Parse(args[i]);
                 }else{
                     result = "引数の型変換に失敗しました。";
                 }
             }
 
             // メソッドを呼び出す
+
 
             object returnValue = method.Invoke(this,passArgs);
             result = "呼び出し成功:" + returnValue;

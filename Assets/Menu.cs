@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour {
         }
 
 
-        if (GUILayout.Button ("フィールドやメソッドの列挙")) {
+        if (GUILayout.Button ("SendMessageみたいな機能")) {
 
             Application.LoadLevel ("SendMessageLike");
 

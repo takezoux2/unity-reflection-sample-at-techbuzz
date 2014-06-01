@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SampleClass {
 
-
+    public bool 真偽値 = false;
 
     public int intのフィールド = 23;
 
